@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
-// import './App.css'
+import { Route, Routes } from "react-router";
+
+import Header from "./components/Header/Header.jsx";
+import Home from "./components/Home/Home.jsx";
+
 import * as trackService from "./services/trackService.js";
-import TrackList from "./components/TrackList/TrackList.jsx";
+// import TrackList from "./components/TrackList/TrackList.jsx";
 import TrackForm from "./components/TrackForm/TrackForm.jsx";
 import TrackDetails from "./components/TrackDetails/TrackDetails.jsx";
 import NowPlaying from "./components/NowPlaying/NowPlaying.jsx";
@@ -85,13 +89,18 @@ function App() {
 
   return (
     <>
-      <TrackList
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+
+      {/* <TrackList
         tracks={tracks}
         handleFormVisible={handleFormVisible}
         buttonText={buttonText}
         setSelectedTrack={setSelectedTrack}
         setPlayingTrack={setPlayingTrack}
-      />
+      /> */}
 
       {playingTrack ? <NowPlaying playingTrack={playingTrack} /> : null}
 
