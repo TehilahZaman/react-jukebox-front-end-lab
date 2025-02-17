@@ -1,13 +1,19 @@
+import "./Header.css";
 import { Link } from "react-router";
 
-export default function Header(props) {
-  <nav>
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-    </ul>
-  </nav>;
+export default function Header() {
+  return (
+    <nav>
+      <ul className="header">
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/add-track"> Add New Track</Link>
+        </li>
+      </ul>
+    </nav>
+  );
 }
 
 /*

@@ -17,9 +17,9 @@ export default function TrackDetails({
           <dt>Artist: {selectedTrack.artist}</dt>
           <dd></dd>
           <button onClick={() => deleteTrack(selectedTrack._id)}>Delete</button>
-          <button onClick={() => handleFormVisible(selectedTrack)}>
+          {/* <button onClick={() => handleFormVisible(selectedTrack)}>
             Edit Track
-          </button>
+          </button> */}
           <button onClick={() => setSelectedTrack(null)}>Close Details</button>
         </div>
       )}

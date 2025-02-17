@@ -1,28 +1,29 @@
 import { useState } from "react";
+import { useNavigate, useParams } from "react-router";
 
 const initialState = { title: "", artist: "" };
 
 export default function TrackForm(props) {
+  console.log(props.tracks)
+  const navigate = useNavigate();
+  const { trackId } = useParams();
+
+  const editingTrack = props.tracks.find((track) => track._id === trackId);
+  // find the track whose _id matches the params trackId
+
   const [formData, setFormData] = useState(
-    props.selectedTrack ? props.selectedTrack : initialState
+    editingTrack ? editingTrack : initialState
   );
-  // for update route:
-  // if the edit button is pushed, it sends the track info to the app toggle/handle function
-  // so the track id exists and selected track is not null
-  // in list when the track is selected, selected track updates to tha track
-  // and is pased to Form
-  // if the selected track exists
-  // then the form data is pre filled out with the trakc info
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (props.selectedTrack) {
-      props.handleUpdateTrack(props.selectedTrack._id, formData);
+    if (editingTrack) {
+      props.handleUpdateTrack(editingTrack._id, formData);
     } else {
       props.createTrack(formData);
     }
-    props.handleFormVisible(props.selectedTrack);
     setFormData(initialState);
+    navigate("/");
   }
 
   function handleChange(e) {
@@ -50,7 +51,7 @@ export default function TrackForm(props) {
       />
       <button type="submit">
         {" "}
-        {props.selectedTrack ? "Edit Track" : "Add New Track"}{" "}
+        {editingTrack ? "Edit Track" : "Add New Track"}{" "}
       </button>
     </form>
   );

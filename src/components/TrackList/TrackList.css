@@ -1,0 +1,29 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list div {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 8px;
+  margin: 15px;
+  width: 40vh;
+  height: 13.5vh;
+  border: solid black;
+  border-radius: 5px;
+}
+
+.list li {
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+.list button {
+  width: 8vh;
+  height: 4vh;
+  border-radius: 7px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
