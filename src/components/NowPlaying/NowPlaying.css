@@ -2,7 +2,14 @@
   border: solid black;
   border-radius: 5px;
   width: 40%;
-  height: 30vh;
+  height: 20vh;
   margin-left: 30%;
   margin-right: 30%;
+  text-align: left;
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+.now-playing dt {
+  padding-bottom: 15px;
 }
