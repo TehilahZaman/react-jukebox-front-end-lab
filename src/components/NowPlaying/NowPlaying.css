@@ -1,0 +1,14 @@
+.now-playing {
+  border: solid black;
+  border-radius: 5px;
+  width: 45vh;
+  height: 20vh;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 30px;
+  background-color: rgb(28, 179, 81);
+}
+
+.now-playing dt {
+  padding-bottom: 15px;
+}

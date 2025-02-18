@@ -3,13 +3,13 @@
 }
 
 :root {
-  --main-bg-color: blue;
+  --main-bg-color: #777777;
   --sand-tan: #e1b382;
   --night-blue: #2d545e;
 }
 
 body {
-  background-color: gray;
+  background-color: #909090;
   /* Use a system font; if none are available, use an available sans-serif font */
   font-family: system-ui, sans-serif;
   /* Ensures full height compatibility across devices */

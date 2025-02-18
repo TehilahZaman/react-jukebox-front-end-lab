@@ -1,9 +1,11 @@
+import "./NowPlaying.css";
 export default function NowPlaying(props) {
   return (
-    <section>
-      <dt>Playing: {props.playingTrack.title}</dt>
+    <section className="now-playing">
+      <h3>Now Playing: </h3>
+      <dt>Title: {props.playingTrack.title}</dt>
       <dd></dd>
-      <dt>By: {props.playingTrack.artist}</dt>
+      <dt>Artist: {props.playingTrack.artist}</dt>
       <dd></dd>
     </section>
   );

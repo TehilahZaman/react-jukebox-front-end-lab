@@ -1,0 +1,36 @@
+h2 {
+  border: solid black;
+  border-radius: 5px;
+  width: 45vh;
+  height: 20vh;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 30px;
+  background-color: rgb(28, 179, 81);
+}
+.details {
+  border: solid black;
+  border-radius: 5px;
+  width: 45vh;
+  height: 20vh;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 30px;
+  background-color: rgb(28, 179, 81);
+}
+
+.details dt {
+  padding-bottom: 15px;
+}
+
+.details button {
+  width: 10vh;
+  height: 4.5vh;
+  border-radius: 7px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.buttons {
+  display: flex;
+}

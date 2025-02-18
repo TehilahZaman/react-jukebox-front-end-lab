@@ -1,3 +1,4 @@
+import "./TrackList.css";
 export default function TrackList(props) {
   const trackLis = props.tracks.map((track) => (
     <div key={track._id}>
@@ -11,9 +12,9 @@ export default function TrackList(props) {
   return (
     <section>
       <h1>Track List</h1>
-      <button onClick={props.handleFormVisible}>{props.buttonText}</button>
+      <button className="form-button" onClick={props.handleFormVisible}>{props.buttonText}</button>
       {trackLis.length !== 0 ? (
-        <ul>{trackLis}</ul>
+        <ul className="list">{trackLis}</ul>
       ) : (
         <h1>There are no tracks yet!</h1>
       )}

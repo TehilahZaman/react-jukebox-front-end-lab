@@ -1,3 +1,4 @@
+import "./App.css";
 import { useState, useEffect } from "react";
 // import './App.css'
 import * as trackService from "./services/trackService.js";
@@ -84,7 +85,7 @@ function App() {
   const buttonText = formIsVisible ? "Close Form" : "New Track";
 
   return (
-    <>
+    <main>
       <TrackList
         tracks={tracks}
         handleFormVisible={handleFormVisible}
@@ -92,9 +93,6 @@ function App() {
         setSelectedTrack={setSelectedTrack}
         setPlayingTrack={setPlayingTrack}
       />
-
-      {playingTrack ? <NowPlaying playingTrack={playingTrack} /> : null}
-
       {formIsVisible && (
         <TrackForm
           createTrack={createTrack}
@@ -103,13 +101,16 @@ function App() {
           handleUpdateTrack={handleUpdateTrack}
         />
       )}
-      <TrackDetails
-        selectedTrack={selectedTrack}
-        setSelectedTrack={setSelectedTrack}
-        deleteTrack={deleteTrack}
-        handleFormVisible={handleFormVisible}
-      />
-    </>
+      <div className="container">
+        {playingTrack ? <NowPlaying playingTrack={playingTrack} /> : null}
+        <TrackDetails
+          selectedTrack={selectedTrack}
+          setSelectedTrack={setSelectedTrack}
+          deleteTrack={deleteTrack}
+          handleFormVisible={handleFormVisible}
+        />
+      </div>
+    </main>
   );
 }
 

@@ -1,3 +1,4 @@
+import "./TrackForm.css";
 import { useState } from "react";
 
 const initialState = { title: "", artist: "" };
@@ -30,7 +31,7 @@ export default function TrackForm(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
       <label htmlFor="title">Track Title: </label>
       <input
         type="text"
